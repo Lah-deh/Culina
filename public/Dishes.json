@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "name": "Alfredo Pasta",
+    "description": "Creamy pasta with grilled chicken and herbs",
+    "price": 2500,
+    "image": "/images/Alfredo Pasta.jpg",
+    "category": "Food"
+  },
+  {
+    "id": 2,
+    "name": "Jollof Rice with Chicken",
+    "description": "Spicy Nigerian Jollof served with grilled chicken",
+    "price": 2000,
+    "image": "/images/Jollof Rice with Chicken.jpg",
+    "category": "Food"
+  },
+  {
+    "id": 3,
+    "name": "Sushi Platter",
+    "description": "Fresh assorted sushi rolls with soy sauce",
+    "price": 4000,
+    "image": "/images/Sushi Platte.jpg",
+    "category": "Food"
+  },
+  {
+    "id": 4,
+    "name": "Beef Lasagna",
+    "description": "Layers of pasta, cheese, and savory beef sauce",
+    "price": 3000,
+    "image": "/images/Beef Lasagna.jpg",
+    "category": "Pastry"
+  },
+  {
+    "id": 5,
+    "name": "Grilled Salmon",
+    "description": "Perfectly grilled salmon with lemon butter sauce",
+    "price": 4500,
+    "image": "/images/Grilled Salmon.jpg",
+    "category": "Pastry"
+  },
+  {
+    "id": 6,
+    "name": "Chicken Shawarma Wrap",
+    "description": "Juicy chicken wrapped in soft flatbread with veggies",
+    "price": 1800,
+    "image": "/images/Chicken Shawarma Wra.jpg",
+    "category": "Food"
+  },
+
+  {
+    "id": 7,
+    "name": "American Cocktail",
+    "description": " A refreshing blend of vodka, triple sec, cranberry juice, and lime juice",
+    "price": 1800,
+    "image": "/images/cocktail.jpg",
+    "category": "Drink"
+  }
+
+  
+]
