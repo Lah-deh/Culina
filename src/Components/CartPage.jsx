@@ -4,12 +4,18 @@ import { removeFromCart, updateQuantity } from '../Store/cartSlice';
 import { useNavigate } from 'react-router-dom';
 import { IoMdArrowBack } from "@react-icons/all-files/io/IoMdArrowBack"; 
 import { MdOutlineCancel } from "react-icons/md";
+import { toast } from 'react-toastify'; 
 
 const CartPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { items } = useSelector(state => state.cart);
   
+
+  const isAuthenticated = !!localStorage.getItem('user') || 
+                         !!localStorage.getItem('token') || 
+                         !!useSelector(state => state.auth?.isAuthenticated);
+
   const handleBack = () => navigate(-1);
 
   const subtotal = items.reduce((acc, item) => {
@@ -19,6 +25,25 @@ const CartPage = () => {
   const deliveryFee = 500;
   const total = subtotal + deliveryFee;
 
+  
+  const handleCheckout = () => {
+    if (items.length === 0) return;
+    
+    if (!isAuthenticated) {
+      toast.info('Please login to checkout', { 
+        toastId: 'checkout-auth',
+        autoClose: 2000 
+      });
+      setTimeout(() => {
+        navigate('/auth');
+      }, 500);
+      return;
+    }
+    
+    
+    navigate('/checkout');
+  };
+
   if (items.length === 0) {
     return (
       <div className="cart-page">
@@ -27,8 +52,8 @@ const CartPage = () => {
           <h2>Your Cart</h2>
         </div>
         <div style={{ textAlign: 'center', padding: '40px', color: '#999' }}>
-          <h3>Your cart is empty </h3>
-          <p>Add some delicious dishes </p>
+          <h3>Your cart is empty</h3>
+          <p>Add some delicious dishes</p>
           <button 
             onClick={() => navigate('/category')} 
             style={{ 
@@ -51,7 +76,7 @@ const CartPage = () => {
     <div className="cart-page">
       <div className='mainn'>
         <IoMdArrowBack onClick={handleBack} />
-        <h2>Your Cart </h2>
+        <h2>Your Cart</h2>
       </div>
       
       <div className="cart-items">
@@ -113,7 +138,7 @@ const CartPage = () => {
         </div>
         <button 
           className="checkout-btn"
-          onClick={() => navigate('/checkout')}
+          onClick={handleCheckout} 
           disabled={items.length === 0}
         >
           Proceed to Checkout

@@ -16,7 +16,7 @@ const Hero = () => {
         <div className='hero'>
             <h1>Intercontinental Dishes Made Simple</h1>
             <p>Order from Culina and enjoy dishes from every corner of the world</p>
-            <button onClick={handleClick}>Veiw Menu</button>
+            <button onClick={handleClick}>View Menu</button>
         </div>
         <h3>Browse by Category</h3>
         <div className='all'>
