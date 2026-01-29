@@ -4,7 +4,7 @@ import '../Styles/Auth.scss'
 
 
 const Header = lazy(() => import("../Components/Header"));
-const Auth = lazy(() => import("../Components/auth.jsx"));
+const Auth = lazy(() => import("../Components/Auth.jsx"));
 
 const Footer=lazy(() =>import ("../Components/Footer.jsx"));
 
