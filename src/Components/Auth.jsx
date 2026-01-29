@@ -65,17 +65,20 @@ const Auth = () => {
         
         localStorage.setItem('user', JSON.stringify(user));
         localStorage.setItem('token', 'temp-token');
+
+        const cameFromCart = localStorage.getItem('redirectFromCart');
+        localStorage.removeItem('redirectFromCart');
         toast.success('Login successful ', { 
           toastId,
           autoClose: 2000 
         });
         setTimeout(() => {
-          toast.dismiss(toastId); 
-          navigate('/checkout');
+          toast.dismiss('auth'); 
+          navigate(cameFromCart ? '/checkout' : '/category');
         }, 800);
         
       } else {
-        // SIGNUP
+        
         const newUser = await db.createDocument('users', {
           email: values.email,
           Fullname: values.name,

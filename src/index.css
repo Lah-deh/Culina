@@ -22,6 +22,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 
   .head{
     max-width: 100%;
@@ -58,10 +59,28 @@ body{
     display: flex;
     gap: 20px;
     position: relative;
+    align-items: center;
+    
 
     .icon{
       font-size: 25px;
       cursor: pointer;
+    }
+
+    .login-btn, .logout-btn {
+      background: #ff6b35;
+      color: white;
+      border: none;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #e55a2b;
+        transform: scale(1.05);
+      }
     }
 
     .cart-icon{

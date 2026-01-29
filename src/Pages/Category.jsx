@@ -31,7 +31,7 @@ function category() {
           content="Order from Culina and enjoy international dishes delivered fresh to your home."
         />
         <meta property="og:image" content="/images/logo.png" />
-        <meta property="og:url" content="https://yourdomain.com" />
+        <meta property="og:url" content="https://culina-ten.vercel.app/" />
         <meta property="og:type" content="website" />
 
         
@@ -41,7 +41,7 @@ function category() {
             "@context": "https://schema.org",
             "@type": "Restaurant",
             "name": "Culina",
-            "image": "https://yourdomain.com/images/logo.png",
+            "image": "https://culina-ten.vercel.app/",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "lekki, Lagos",
@@ -49,7 +49,7 @@ function category() {
               "addressCountry": "NG"
             },
             "servesCuisine": "Intercontinental",
-            "url": "https://yourdomain.com"
+            "url": "https://culina-ten.vercel.app/"
           }
           `}
         </script>

@@ -30,18 +30,17 @@ const CartPage = () => {
     if (items.length === 0) return;
     
     if (!isAuthenticated) {
-      toast.info('Please login to checkout', { 
-        toastId: 'checkout-auth',
-        autoClose: 2000 
-      });
-      setTimeout(() => {
-        navigate('/auth');
-      }, 500);
+      localStorage.setItem('redirectFromCart', 'true'); 
+      toast.info('Please login to checkout', { toastId: 'checkout-auth' });
+      setTimeout(() => navigate('/login'), 500);
       return;
     }
-    
-    
     navigate('/checkout');
+
+    
+    
+    
+    
   };
 
   if (items.length === 0) {
