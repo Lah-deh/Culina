@@ -41,14 +41,7 @@ const Header = () => {
         <img src={logo} alt='logo' loading='lazy'/>
       </div>
 
-      <div className='list'>
-        <ul>
-          <li><Link to='/'>Home</Link></li>
-          <li><Link to='/category'>Menu</Link></li>
-          <li><Link to='/'>About Us</Link></li>
-          <li><Link to='/'>Contact</Link></li>
-        </ul>
-      </div>
+      
 
       <div className='ic'>
         
